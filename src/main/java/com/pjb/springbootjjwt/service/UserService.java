@@ -11,13 +11,15 @@ import org.springframework.stereotype.Service;
  */
 @Service("UserService")
 public class UserService {
-    @Autowired
-    UserMapper userMapper;
-    public User findByUsername(User user){
-        return userMapper.findByUsername(user.getUsername());
-    }
-    public User findUserById(String userId) {
-        return userMapper.findUserById(userId);
-    }
+	@Autowired
+	UserMapper userMapper;
+
+	public User findByUsername(User user) {
+		return userMapper.findByUsername(user.getUsername());
+	}
+
+	public User findUserById(String userId) {
+		return userMapper.findUserById(userId);
+	}
 
 }

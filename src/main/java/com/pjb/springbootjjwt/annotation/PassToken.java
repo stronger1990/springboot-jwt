@@ -9,8 +9,8 @@ import java.lang.annotation.Target;
  * @author jinbin
  * @date 2018-07-08 20:38
  */
-@Target({ElementType.METHOD, ElementType.TYPE})
+@Target({ ElementType.METHOD, ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface PassToken {
-    boolean required() default true;
+	boolean required() default true;
 }
