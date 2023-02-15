@@ -6,9 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @MapperScan("com.pjb.springbootjjwt.mapper")
 @SpringBootApplication
-public class SpringbootJjwtApplication {
+public class SpringbootJwtApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringbootJjwtApplication.class, args);
+        SpringApplication.run(SpringbootJwtApplication.class, args);
     }
+
 }

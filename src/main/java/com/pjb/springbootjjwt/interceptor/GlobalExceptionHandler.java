@@ -10,9 +10,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2018-07-08 22:37
  * 
  * 全局异常处理
+ *
+ * @ControllerAdvice + @ResponseBody = @RestControllerAdvice
  */
 @ControllerAdvice
-public class GloablExceptionHandler {
+public class GlobalExceptionHandler {
 	@ResponseBody
 	@ExceptionHandler(Exception.class)
 	public Object handleException(Exception e) {

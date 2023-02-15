@@ -5,7 +5,7 @@ spring:
     username: root
     password: 66666666
 mybatis:
-  config-location: classpath:mybatis.xml
+  mapper-locations: classpath:mapper/*Mapper.xml
 debug: true
 server:
   port: 8888
