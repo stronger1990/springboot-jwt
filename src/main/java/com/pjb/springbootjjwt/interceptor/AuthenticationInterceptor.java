@@ -39,7 +39,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 		}
 		HandlerMethod handlerMethod = (HandlerMethod) object;
 		Method method = handlerMethod.getMethod();
-		// 检查是否有passtoken注释，有则跳过认证
+		// 检查是否有PassToken注释，判断是否为true则跳过认证
 		if (method.isAnnotationPresent(PassToken.class)) {
 			PassToken passToken = method.getAnnotation(PassToken.class);
 			if (passToken.required()) {
@@ -75,6 +75,7 @@ public class AuthenticationInterceptor implements HandlerInterceptor {
 				return true;
 			}
 		}
+		// 如果没有PassToken和UserLoginToken注解，也默认能访问
 		return true;
 	}
 

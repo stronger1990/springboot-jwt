@@ -14,16 +14,16 @@ package com.pjb.springbootjjwt.entity;
 //@AllArgsConstructor
 //@NoArgsConstructor
 public class User {
-	private String Id;
+	private String id;
 	private String username;
 	private String password;
 
 	public String getId() {
-		return Id;
+		return id;
 	}
 
 	public void setId(String id) {
-		Id = id;
+		this.id = id;
 	}
 
 	public String getUsername() {

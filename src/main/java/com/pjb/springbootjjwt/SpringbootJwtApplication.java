@@ -4,8 +4,8 @@ import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@MapperScan("com.pjb.springbootjjwt.mapper")
 @SpringBootApplication
+@MapperScan("com.pjb.springbootjjwt.mapper")
 public class SpringbootJwtApplication {
 
     public static void main(String[] args) {

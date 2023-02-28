@@ -8,4 +8,4 @@ mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml
 debug: true
 server:
-  port: 8888
+  port: 8123

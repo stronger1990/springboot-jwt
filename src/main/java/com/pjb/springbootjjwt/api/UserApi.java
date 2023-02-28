@@ -28,9 +28,14 @@ public class UserApi {
         return "服务器能正常访问";
     }
 
-    // 登录
+    /**
+     * 登录接口
+     * 一开始没有@RequestBody，所以拿到的user一直为null，因为JSON是放在body的
+     * @param user
+     * @return
+     */
     @PostMapping("/login")
-    public Object login(User user) {
+    public Object login(@RequestBody User user) {
         JSONObject jsonObject = new JSONObject();
         User userForBase = userService.findByUsername(user);
         if (userForBase == null) {
@@ -44,6 +49,7 @@ public class UserApi {
                 String token = tokenService.getToken(userForBase);
                 jsonObject.put("token", token);
                 jsonObject.put("user", userForBase);
+                jsonObject.put("message", "登录成功");
                 return jsonObject;
             }
         }

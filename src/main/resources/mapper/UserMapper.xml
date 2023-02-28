@@ -11,6 +11,6 @@
             resultType="com.pjb.springbootjjwt.entity.User">
         SELECT *
         FROM user
-        where id = #{Id}
+        where id = #{id}
     </select>
 </mapper>
